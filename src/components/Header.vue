@@ -10,24 +10,8 @@
                         :key="index"
                         :style="`animation-delay: 0.${index+1}s;`"
                     >
-                        <!-- <a href="#">{{item.name}}</a> -->
                         <router-link :to="item.path">{{item.name}}</router-link>
                     </li>
-                    <!-- <li class="wow fadeInLeft" style="animation-delay: 0.1s;">
-                        <a href="#">首页</a>
-                    </li>
-                    <li class="wow fadeInLeft" style="animation-delay: 0.2s;">
-                        <a href="#">产品中心</a>
-                    </li>
-                    <li class="wow fadeInLeft" style="animation-delay: 0.3s;">
-                        <a href="#">成功案例</a>
-                    </li>
-                    <li class="wow fadeInLeft" style="animation-delay: 0.4s;">
-                        <a href="#">公司优势</a>
-                    </li>
-                    <li class="wow fadeInLeft" style="animation-delay: 0.5s;">
-                        <a href="#">了解我们</a>
-                    </li>-->
                 </ul>
             </div>
         </div>
@@ -35,6 +19,8 @@
 </template>
 
 <script>
+import { WOW } from 'wowjs'
+
 export default {
     data() {
         return {
@@ -45,6 +31,21 @@ export default {
                 { name: '公司优势', path: '/superiority' },
                 { name: '了解我们', path: '/about' },
             ]
+        }
+    },
+    mounted() {
+        this._initWOW()
+    },
+    methods: {
+        _initWOW() {
+            const wow = new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: true,
+                live: true
+            })
+            wow.init();
         }
     },
 }

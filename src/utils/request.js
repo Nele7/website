@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+import {baseURL} from '@/config/'
 const front = axios.create({
     baseURL,
     timeout:2000
