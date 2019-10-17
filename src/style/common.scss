@@ -3,14 +3,22 @@ html,body {
     font-size: 62.5%;
     @include scrollBar;
 }
-
-@media screen and (min-width:1210px){
-    .container {
-        width: 1210px;
-        margin: 0 auto;
-        height: 100%;
-    }
+.container {
+    width: 1210px;
+    margin: 0 auto;
+    height: 100%;
 }
+// @media screen and (min-width:1210px){
+    
+// }
+@media screen and (max-width: 767px){
+    .container {
+        width: auto;
+        // margin: 0 auto;
+        height: 100%;
+        padding: 0 2%;
+    }
+  }
 // @media screen and (min-width:1210px){
 //     .container {
 //         width: 1210px;

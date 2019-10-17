@@ -85,6 +85,12 @@ export default {
 @media screen and (max-width: 767px){
   .sub_banner {
     height: 330px;
+    .title {
+      font-size: 30px;
+      &:after {
+        width: 120px;
+      }
+    }
   }
 }
 </style>
