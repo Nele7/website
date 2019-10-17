@@ -48,7 +48,7 @@ export default {
 }
 .swiper-slide {
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     // &.slide-1 {
     //     background-image: url('https://www.fsxhs.com/db_picture/pro3/201807200826074660.jpg');
     // }

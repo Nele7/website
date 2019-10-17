@@ -1,6 +1,6 @@
 <template>
   <div class="sub_banner" :style="bgImg">
-    <h3 class="title wow zoomIn">{{title}}</h3>
+    <h3 class="title wow zoomIn animated">{{title}}</h3>
   </div>
 </template>
 
@@ -49,11 +49,12 @@ export default {
 <style lang="scss" scoped>
 .sub_banner {
   width: 100%;
-  height: 490px;
   background-size: cover;
+  height: 490px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
   .title {
     font-weight: bold;
     font-size: 45px;
@@ -69,6 +70,21 @@ export default {
       bottom: -9px;
       text-shadow: 2px 2px 0 #646161;
     }
+  }
+}
+// @media screen and (min-width: 1211px){
+//   .sub_banner {
+//     height: 490px;
+//   }
+// }
+// @media screen and (min-width:768px){
+//   .sub_banner {
+//     height: 490px;
+//   }
+// }
+@media screen and (max-width: 767px){
+  .sub_banner {
+    height: 330px;
   }
 }
 </style>

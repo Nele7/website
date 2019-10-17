@@ -5,7 +5,7 @@
                 <a href="#" class="logo"></a>
                 <ul class="nav">
                     <li
-                        class="wow fadeInLeft"
+                        class="wow fadeInLeft animated"
                         v-for="(item,index) in navList"
                         :key="index"
                         :style="`animation-delay: 0.${index+1}s;`"

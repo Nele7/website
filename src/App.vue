@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss">
 #app {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    font-family: "微软雅黑", "Microsoft YaHei", "SimSun", "宋体" !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
