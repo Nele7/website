@@ -63,11 +63,11 @@ export default {
     &:after {
       content: "";
       position: absolute;
-      width: 175px;
+      width: 100%;
       height: 3px;
       background-color: #fff;
       left: 0;
-      bottom: -9px;
+      bottom: -10px;
       text-shadow: 2px 2px 0 #646161;
     }
   }

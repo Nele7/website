@@ -13,10 +13,10 @@ back.interceptors.request.use(config => {
 
 })
 
-instance.interceptors.response.use(response => {
+back.interceptors.response.use(response => {
 
 })
 
-export const front
-export const back
+export  {front,back}
+// export const back
     
