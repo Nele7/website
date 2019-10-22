@@ -3,7 +3,7 @@
         <div class="navbar" :class="{nav_down:scrollEvent}" ref="navbar">
             <div class="container">
                 <div class="top">
-                    <a href="#" class="logo"></a>
+                    <a href="#" class="logo">山东曹县安居门窗</a>
                     <ul class="nav">
                         <li
                             class="wow fadeInLeft animated"
@@ -109,23 +109,30 @@ export default {
     width: 100%;
     border-bottom: 1px solid rgba(171, 199, 226, 0.4);
     top: 0;
-    transition: all 0.3s;
+    transition: background 0.3s;
     &.nav_down {
-        background: hsla(0, 0%, 100%, 0.8);
+        .logo {
+            color: #000;
+        }
+        background: hsla(0, 0%, 100%, 0.5);
         box-shadow: 0 0 5px #888;
+        backdrop-filter: blur(5px);
         .nav {
             > li {
                 > a {
-                    color: #474a4c;
+                    color: #000;
                 }
             }
         }
     }
     .logo {
         display: inline-block;
-        background: url("https://www.fsxhs.com/img/t_logo.png") top;
+        // background: url("https://www.fsxhs.com/img/t_logo.png") top;
         height: 48px;
         width: 200px;
+        line-height: 48px;
+        color: #fff;
+        font-size: 2rem;
     }
 
     .nav {

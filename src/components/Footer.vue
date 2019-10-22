@@ -31,6 +31,7 @@
 .footer {
     background: #2B2B2B;
     color: #868686;
+    width: 100%;
 }
 .fot_panel {
     padding: 10px 0;
