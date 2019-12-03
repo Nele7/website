@@ -6,7 +6,7 @@
                 <el-row :gutter="20">
                     <el-col :md="12" :sm="24" :xs="24">
                         <div class="cover-img">
-                            <img src="http://www.phoenx.cn/_20191006/1712092387.jpg" alt="" width="100%">
+                            <img src="../assets/img/img_about.jpg" alt="" width="100%">
                         </div>
                     </el-col>
                     <el-col :md="12" :sm="24" :xs="24">
@@ -63,12 +63,12 @@ import {ERR_OK,ERR_MSG} from '@/config/'
             return {
                 info:[
                     {
-                        name:'电话',
-                        number:'0757-85659078'
+                        name:'手机',
+                        number:'15054036680'
                     },
                     {
                         name:'手机',
-                        number:'15054036680 或 15275043688'
+                        number:'15275043688'
                     },
                     {
                         name:'微信',
@@ -101,6 +101,10 @@ import {ERR_OK,ERR_MSG} from '@/config/'
                 wow.init();
             },
             handleBtn() {
+                if(!isPhone(this.form.phone)) {
+                    this.$message.error('请输入正确的手机号')
+                    return false
+                }
                 this._setInfo()
             },
             async _setInfo() {
@@ -109,8 +113,12 @@ import {ERR_OK,ERR_MSG} from '@/config/'
                         ...this.form
                     })
                     if(code === ERR_OK) {
-                        this.$message.success(msg)
-                        console.log(data)
+                        this.$message.success('提交成功')
+                        this.form = {
+                            userName:'',
+                            phone:'',
+                            remark:''
+                        }
                     }else {
                         this.$message.error(msg)
                     }
@@ -124,6 +132,10 @@ import {ERR_OK,ERR_MSG} from '@/config/'
             aMap
         }
     }
+function isPhone(str) {
+  const reg = /^[1][3,4,5,7,8][0-9]{9}$/
+  return reg.test(str)
+}
 </script>
 
 <style lang="scss" scoped>

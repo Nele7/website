@@ -1,12 +1,12 @@
 <template>
     <div id="app" v-cloak>
-        <v-header />
+        <!-- <v-header /> -->
         <!-- <transition name="fade"> -->
-            <keep-alive>
+            <!-- <keep-alive> -->
                 <router-view />
-            </keep-alive>
+            <!-- </keep-alive> -->
         <!-- </transition> -->
-        <v-footer></v-footer>
+        <!-- <v-footer/> -->
     </div>
 </template>
 

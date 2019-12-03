@@ -9,7 +9,7 @@
                 <div class="list">
                     <el-row :gutter="50">
                         <el-col :md="6" class="list-item1" v-for="(item,index) in satffList" :key="index">
-                            <div class="content">
+                            <div class="content-card">
                                 <div class="avatar">
                                     <img :src="item.staffImg" alt="">
                                 </div>
@@ -17,7 +17,6 @@
                                 <p class="desc">{{item.staffPost}}</p>
                             </div>
                         </el-col>
-                        
                     </el-row>
                 </div>
             </div>
@@ -78,13 +77,13 @@ import {ERR_OK,ERR_MSG} from '@/config/'
     padding: 20px 0;
 }
 .list-item1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
-.content {
+.content-card {
     padding:20px;
     text-align: center;
-    // box-shadow: 1px 4px 10px 2px #CCC;
-    border:1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 7px 0 rgba(0,0,0,.1);
+    // border:1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.8s;
     cursor: pointer;
     &:hover{

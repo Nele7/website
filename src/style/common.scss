@@ -12,9 +12,14 @@ html,body {
 // .sticky {
 //     height: calc(100vh - 102px);
 // }
-// html,body {
-//     height: 100%;
-// }
+html,body {
+    height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 // @media screen and (min-width:1210px){
     
 // }

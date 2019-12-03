@@ -32,7 +32,7 @@
                         </h3>
                         <el-row :gutter="10">
                             <el-col class="wow zoomIn" :xs="24" :sm="24" :md="12">
-                                <img src="../assets/img/cp_jieshao.jpg" alt="" width="100%" height="auto">
+                                <img src="../assets/img/img_05.jpg" alt="" width="100%" height="auto">
                             </el-col>
                             <el-col :xs="24" :sm="24" :md="12" class="text-wrapper wow fadeInRight">
                                 <div class="text">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="last-wrapper">
                     <swiper :options="swiperOption">
-                        <swiper-slide v-for="(item,index) in homeExamples" :key="index" class="swiper-slide1">
+                        <swiper-slide v-for="(item,index) in homeExamples" :key="index" class="swiper-slide1" @click="goExamples">
                             <div class="swiper-content" :style="`background-image:url(${item.adhibitionImg})`">
                                 <p>{{item.adhibitionHeadline}}</p>
                             </div>
@@ -67,12 +67,14 @@
                             <el-col :xs="24" :sm="24" :md="12" class="text-wrapper wow fadeInLeft">
                                 <div class="text">
                                     <p>
-                                        世界上已经纳入各种标准的不锈钢有近100种，并且随着科技的进步和工农业的发展，新的不锈钢牌号还在不断增加。对于一种已知牌号的不锈钢，根据其化学成分可推算其铬当量[Cr]和镍当量[Ni]，再利用Schaeffler-Delong不锈钢组织图可大致估计该钢种的组织和性能
+                                        曹县安居卷帘门有限公司（以下简称：曹县安居门厂）
+                                        曹县安居门厂位于山东省菏泽市曹县倪集镇。20013年，曹县安居门厂公司作为设计门窗安装门窗的公司，购地300平方米，自主投资数金额将近达到百万元，并于2019年正式申请成有限公司。
+　
                                     </p>
                                 </div>
                             </el-col>
                             <el-col class="wow zoomIn" :xs="24" :sm="24" :md="12">
-                                <img src="../assets/img/cp_jieshao.jpg" alt="" width="100%" height="auto">
+                                <img src="../assets/img/img_06.jpg" alt="" width="100%" height="auto">
                             </el-col>
                         </el-row>
                     </div>
@@ -131,6 +133,9 @@ export default {
         this._getHomeExamples()
     },
     methods: {
+        goExamples() {
+            this.$router.push('/examples')
+        },
         async _getHomeProduct() {
             try {
                 let {code,data,msg} = await api.front.getHomeProduct()
