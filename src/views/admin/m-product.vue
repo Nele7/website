@@ -143,7 +143,7 @@ export default {
         handleCurrentChange(page) {
             this.pageNum = page
             this._getProduct()
-            console.log(page)
+            // console.log(page)
         },
         changeCascader(value) {
             this.selectCascader = value
@@ -157,7 +157,7 @@ export default {
                 if (code === ERR_OK) {
                     this.tableData = data.dataList
                     this.total = data.total
-                    console.log(data);
+                    // console.log(data);
                 } else {
                     this.$message.error(msg)
                 }

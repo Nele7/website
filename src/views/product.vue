@@ -91,7 +91,7 @@ import {ERR_OK,ERR_MSG} from '@/config/'
                     })
                     if(code === ERR_OK) {
                         this.twoCategory = data
-                        console.log(data)
+                        // console.log(data)
                     }else {
                         this.$message.error(msg)
                     }
@@ -118,7 +118,7 @@ import {ERR_OK,ERR_MSG} from '@/config/'
                     })
                     if(code === ERR_OK) {
                         this.list = data.dataList
-                        console.log('-----------------',data)
+                        // console.log('-----------------',data)
                     }else {
                         this.$message.error(msg)
                     }

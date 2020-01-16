@@ -56,7 +56,7 @@ import {ERR_OK,ERR_MSG} from '@/config/'
                     let {code,data,msg} = await api.front.getSatff()
                     if(code === ERR_OK) {
                         this.satffList = data.dataList
-                        console.log(data)
+                        // console.log(data)
                     }else {
                         this.$message.error(msg)
                     }

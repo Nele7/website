@@ -115,7 +115,7 @@ export default {
                 let { code, data, msg } = await api.back.viewStairPduct()
                 if (code === ERR_OK) {
                     this.tableData = data
-                    console.log(data);
+                    // console.log(data);
                 } else {
                     this.$message.error(msg)
                 }

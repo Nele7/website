@@ -23,7 +23,7 @@ export default {
             const startTime = new Date().getTime()
             const endTime = new Date('2019-11-01 20:00').getTime()
             this.clock = this.date_format(endTime)
-            console.log((endTime-startTime)/1000)
+            // console.log((endTime-startTime)/1000)
         },
         // 补零方法
         fill_zero_prefix(num) {

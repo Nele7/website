@@ -54,7 +54,7 @@ import {ERR_OK,ERR_MSG} from '@/config/'
                     let {code,data,msg} = await api.front.getSuccessExamples()
                     if(code === ERR_OK) {
                         this.examplesList = data.dataList
-                        console.log(data)
+                        // console.log(data)
                     }else {
                         this.$message.error(msg)
                     }
